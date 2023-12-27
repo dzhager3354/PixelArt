@@ -2,15 +2,15 @@ package ru.dzhager3354;
 
 import java.util.function.Consumer;
 
-public abstract class Button {
+public abstract class Button<T> {
     private double x;
     private double y;
     private double width;
     private double height;
     private Window window;
-    private Consumer<Window> consumer;
+    private Consumer<T> consumer;
 
-    public Button(double x, double y, double width, double height, Window window, Consumer<Window> consumer) {
+    public Button(double x, double y, double width, double height, Window window, Consumer<T> consumer) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -47,7 +47,7 @@ public abstract class Button {
         return height;
     }
 
-    protected void release() {
-        consumer.accept(window);
+    protected void release(T t) {
+        consumer.accept(t);
     }
 }

@@ -14,7 +14,7 @@ public class ButtonMode extends Button {
     public void eventClick(double x, double y) {
         if (isClickInHitbox(x, y)) {
             if (isClick)
-                release();
+                release(getWindow());
             isClick = !isClick;
         }
     }
@@ -30,7 +30,7 @@ public class ButtonMode extends Button {
             GL11.glVertex2d(getX(), getY());
             GL11.glVertex2d(getX(), getY()+getHeight());
             GL11.glVertex2d(getX() + getWidth(), getY() + getHeight());
-            GL11.glVertex2d(getX() + getHeight(), getY());
+            GL11.glVertex2d(getX() + getWidth(), getY());
         GL11.glEnd();
     }
 }

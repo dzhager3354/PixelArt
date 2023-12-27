@@ -24,7 +24,6 @@ public class Layer {
         double yCell = Util.translateCursorY(window.getY(), window.getWindowHeight())/window.getScale() - window.getOffsetY();
         int x = (int) Math.floor(xCell);
         int y = (int) Math.floor(yCell);
-        System.out.println(xCell + " " + yCell);
         newCell.setX(x);
         newCell.setY(y);
         cells.add(newCell);
@@ -32,5 +31,17 @@ public class Layer {
 
     public Window getWindow() {
         return window;
+    }
+
+    public void setRed(int level) {
+        colorOption.setRed(level);
+    }
+
+    public void setGreen(int level) {
+        colorOption.setGreen(level);
+    }
+
+    public void setBlue(int level) {
+        colorOption.setBlue(level);
     }
 }

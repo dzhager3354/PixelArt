@@ -40,6 +40,15 @@ public class Window implements Runnable{
         buttons.add(new ButtonMode(0.2, -1, 0.1, 0.1, this, (window -> {
             window.tool = Tools.CREATE;
         })));
+        buttons.add(new ScrollButton(0.4, -1, 0.1, 0.3, this, (button -> {
+            this.getCurrentLayer().setRed(button.getLevel());
+        })));
+        buttons.add(new ScrollButton(0.6, -1, 0.1, 0.3, this, (button -> {
+            this.getCurrentLayer().setGreen(button.getLevel());
+        })));
+        buttons.add(new ScrollButton(0.8, -1, 0.1, 0.3, this, (button -> {
+            this.getCurrentLayer().setBlue(button.getLevel());
+        })));
     }
 
     //Текущие кооринаты мыши на экране в пикселях
