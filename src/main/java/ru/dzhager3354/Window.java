@@ -23,7 +23,7 @@ public class Window implements Runnable{
 
     private double offsetX;
     private double offsetY;
-    private double scale = 1;
+    private double scale = 0.5;
 
     public Tools tool = Tools.CREATE;
 
