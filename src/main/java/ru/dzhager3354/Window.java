@@ -34,19 +34,19 @@ public class Window implements Runnable{
 
     {
         layers.add(new Layer(this));
-        buttons.add(new ButtonMode(-0.05, -1, 0.1, 0.1, this, (window -> {
+        buttons.add(new ButtonMode(-0.5, -1, 0.1, 0.1, this, (window -> {
             window.tool = Tools.MOVE;
         })));
-        buttons.add(new ButtonMode(0.2, -1, 0.1, 0.1, this, (window -> {
+        buttons.add(new ButtonMode(-0.3, -1, 0.1, 0.1, this, (window -> {
             window.tool = Tools.CREATE;
         })));
-        buttons.add(new ScrollButton(0.4, -1, 0.1, 0.3, this, (button -> {
+        buttons.add(new ScrollButton(-0.1, -1, 0.1, 0.3, this, (button -> {
             this.getCurrentLayer().setRed(button.getLevel());
         })));
-        buttons.add(new ScrollButton(0.6, -1, 0.1, 0.3, this, (button -> {
+        buttons.add(new ScrollButton(0.1, -1, 0.1, 0.3, this, (button -> {
             this.getCurrentLayer().setGreen(button.getLevel());
         })));
-        buttons.add(new ScrollButton(0.8, -1, 0.1, 0.3, this, (button -> {
+        buttons.add(new ScrollButton(0.3, -1, 0.1, 0.3, this, (button -> {
             this.getCurrentLayer().setBlue(button.getLevel());
         })));
     }
@@ -145,6 +145,22 @@ public class Window implements Runnable{
         for (Button button : buttons) {
             button.draw();
         }
+        GL11.glTranslated(0.9, -0.9, 0);
+        Color color = getCurrentLayer().getColor();
+        GL11.glBegin(GL_TRIANGLE_FAN);
+            GL11.glColor3d(color.getRed()/256.0, color.getGreen()/256.0, color.getBlue()/256.0);
+            GL11.glVertex2d(-0.1, -0.1);
+            GL11.glVertex2d(-0.1, 0.1);
+            GL11.glVertex2d(0.1, 0.1);
+            GL11.glVertex2d(0.1, -0.1);
+        GL11.glEnd();
+        GL11.glBegin(GL_LINE_LOOP);
+            GL11.glColor3d(1, 1, 1);
+            GL11.glVertex2d(-0.1, -0.1);
+            GL11.glVertex2d(-0.1, 0.1);
+            GL11.glVertex2d(0.1, 0.1);
+            GL11.glVertex2d(0.1, -0.1);
+        GL11.glEnd();
         GL11.glPopMatrix();
     }
 

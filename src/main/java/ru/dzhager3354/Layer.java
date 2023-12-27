@@ -44,4 +44,8 @@ public class Layer {
     public void setBlue(int level) {
         colorOption.setBlue(level);
     }
+
+    public Color getColor() {
+        return colorOption.clone();
+    }
 }

@@ -1,6 +1,6 @@
 package ru.dzhager3354;
 
-public class Color {
+public class Color implements Cloneable{
     private int red;
     private int green;
     private int blue;
@@ -33,5 +33,14 @@ public class Color {
 
     public void setBlue(int blue) {
         this.blue = blue;
+    }
+
+    @Override
+    public Color clone()  {
+        try {
+            return (Color) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
