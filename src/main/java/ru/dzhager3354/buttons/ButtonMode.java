@@ -1,6 +1,7 @@
-package ru.dzhager3354;
+package ru.dzhager3354.buttons;
 
 import org.lwjgl.opengl.GL11;
+import ru.dzhager3354.window.Window;
 
 import java.util.function.Consumer;
 

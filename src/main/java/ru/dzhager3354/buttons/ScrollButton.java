@@ -1,10 +1,11 @@
-package ru.dzhager3354;
+package ru.dzhager3354.buttons;
 
 import org.lwjgl.opengl.GL11;
+import ru.dzhager3354.window.Window;
 
 import java.util.function.Consumer;
 
-public class ScrollButton extends Button{
+public class ScrollButton extends Button {
     private int currLevel;
 
     public ScrollButton(double x, double y, double width, double height, Window window, Consumer<ScrollButton> consumer) {

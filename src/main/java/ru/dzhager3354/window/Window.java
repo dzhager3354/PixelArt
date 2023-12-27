@@ -1,10 +1,15 @@
-package ru.dzhager3354;
+package ru.dzhager3354.window;
 
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.system.MemoryStack;
+import ru.dzhager3354.Tools;
+import ru.dzhager3354.Util;
+import ru.dzhager3354.buttons.Button;
+import ru.dzhager3354.buttons.ButtonMode;
+import ru.dzhager3354.buttons.ScrollButton;
 
 import java.nio.IntBuffer;
 import java.util.ArrayList;

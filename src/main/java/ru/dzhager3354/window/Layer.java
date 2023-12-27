@@ -1,4 +1,6 @@
-package ru.dzhager3354;
+package ru.dzhager3354.window;
+
+import ru.dzhager3354.Util;
 
 import java.util.ArrayList;
 import java.util.List;

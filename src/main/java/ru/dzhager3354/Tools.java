@@ -1,5 +1,7 @@
 package ru.dzhager3354;
 
+import ru.dzhager3354.window.Window;
+
 import java.util.function.Consumer;
 
 public enum Tools {

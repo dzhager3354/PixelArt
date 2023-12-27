@@ -1,4 +1,6 @@
-package ru.dzhager3354;
+package ru.dzhager3354.buttons;
+
+import ru.dzhager3354.window.Window;
 
 import java.util.function.Consumer;
 

@@ -1,4 +1,4 @@
-package ru.dzhager3354;
+package ru.dzhager3354.window;
 
 public class Color implements Cloneable{
     private int red;

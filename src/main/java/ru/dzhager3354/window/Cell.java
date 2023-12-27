@@ -1,4 +1,4 @@
-package ru.dzhager3354;
+package ru.dzhager3354.window;
 
 import org.lwjgl.opengl.GL11;
 
